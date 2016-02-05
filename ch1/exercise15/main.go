@@ -15,8 +15,8 @@ import (
 var palette = []color.Color{color.Black, color.RGBA{0x33, 0xcc, 0x33, 0xff}}
 
 const (
-	whiteIndex = 0 // first color in palette
-	blackIndex = 1 // next color in palette
+	bgIndex = 0 // first color in palette
+	fgIndex = 1 // next color in palette
 )
 
 func main() {
@@ -44,7 +44,7 @@ func lissajous(out io.Writer) {
 			img.SetColorIndex(
 				size+int(x*size+0.5),
 				size+int(y*size+0.5),
-				blackIndex)
+				fgIndex)
 		}
 		phase += 0.1
 		anim.Delay = append(anim.Delay, delay)
