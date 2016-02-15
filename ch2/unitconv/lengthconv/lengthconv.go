@@ -3,6 +3,7 @@ package lengthconv
 
 import "fmt"
 
+// TODO: add furlongs, kilometres and miles (nautical?)
 type Metre float64
 type Inch float64
 type Foot float64
