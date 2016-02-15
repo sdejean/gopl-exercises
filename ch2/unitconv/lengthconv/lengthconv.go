@@ -10,8 +10,8 @@ type Foot float64
 type Yard float64
 
 const (
-	MetreToYard Metre = 0.9144
-	YardToMetre Yard  = 1.0936
+	MetreToYard Metre = 1.0936
+	YardToMetre Yard  = 0.9144
 )
 
 func (m Metre) String() string { return fmt.Sprintf("%g m", m) }
@@ -29,16 +29,16 @@ func MToI(m Metre) Inch { return Inch(YToI(MToY(m))) }
 func MToY(m Metre) Yard { return Yard(m * MetreToYard) }
 
 // FToI converts a length in Feet into Inches
-func FToI(f Foot) Inch { return Inch(f / 12) }
+func FToI(f Foot) Inch { return Inch(f * 12) }
 
 // FToM converts a length in Feet into Metres
 func FToM(f Foot) Metre { return Metre(YToM(FToY(f))) }
 
 // FToY converts a length in Feet into Yards
-func FToY(f Foot) Yard { return Yard(f * 3) }
+func FToY(f Foot) Yard { return Yard(f / 3) }
 
 // YToF converts a length in Yards into Feet
-func YToF(y Yard) Foot { return Foot(y / 3) }
+func YToF(y Yard) Foot { return Foot(y * 3) }
 
 // YToI converts a length in Yards into Inches
 func YToI(y Yard) Inch { return Inch(y * 36) }
