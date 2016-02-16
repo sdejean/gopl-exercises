@@ -4,7 +4,6 @@
  */
 package main
 
-import "flag"
 import "fmt"
 import "os"
 import "strconv"
@@ -13,31 +12,14 @@ import "../unitconv/lengthconv"
 import "../unitconv/tempconv"
 
 func main() {
-	var f = flag.String("type", "", "type of unit specified, one of: length, mass, temp(erature), all")
-	flag.Parse()
 
-	var args = flag.Args()
-	switch {
-	case *f == "all":
-		fmt.Printf("Units of length:\n")
-		printLenConv(args)
-		fmt.Printf("Units of mass:\n")
-		printMassConv(args)
-		fmt.Printf("Units of temperature:\n")
-		printTempConv(args)
-	case *f == "length":
-		fmt.Printf("Units of length:\n")
-	case *f == "mass":
-		fmt.Printf("Units of mass:\n")
-	case *f == "temp":
-		fmt.Printf("Units of temperature:\n")
-		printTempConv(args)
-	case *f == "temperature":
-		fmt.Printf("Units of temperature:\n")
-		printTempConv(args)
-	default:
-		flag.PrintDefaults()
-	}
+	args := os.Args[1:]
+	fmt.Printf("Units of length:\n")
+	printLenConv(args)
+	fmt.Printf("Units of mass:\n")
+	printMassConv(args)
+	fmt.Printf("Units of temperature:\n")
+	printTempConv(args)
 }
 
 // printLenConv
