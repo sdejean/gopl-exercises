@@ -9,6 +9,7 @@ import "os"
 import "strconv"
 
 import "../unitconv/lengthconv"
+import "../unitconv/massconv"
 import "../unitconv/tempconv"
 
 func main() {
@@ -47,7 +48,25 @@ func printLenConv(args []string) {
 
 // printMassConv
 func printMassConv(args []string) {
-	fmt.Println("TODO: MASS CONVERSIONS")
+	for _, arg := range args {
+		t, err := strconv.ParseFloat(arg, 64)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "cfk: %v\n", err)
+			os.Exit(1)
+		}
+		k := massconv.Kilogram(t)
+		o := massconv.Ounce(t)
+		p := massconv.Pound(t)
+		s := massconv.Stone(t)
+		fmt.Printf("%s = %s, %s = %s, %s = %s\n",
+			k, massconv.KToO(k), k, massconv.KToP(k), k, massconv.KToS(k))
+		fmt.Printf("%s = %s, %s = %s, %s = %s\n",
+			o, massconv.OToK(o), o, massconv.OToP(o), o, massconv.OToS(o))
+		fmt.Printf("%s = %s, %s = %s, %s = %s\n",
+			p, massconv.PToK(p), p, massconv.PToO(p), p, massconv.PToS(p))
+		fmt.Printf("%s = %s, %s = %s, %s = %s\n",
+			s, massconv.SToK(s), s, massconv.SToO(s), s, massconv.SToP(s))
+	}
 }
 
 // printTempConv

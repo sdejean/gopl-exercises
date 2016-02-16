@@ -9,8 +9,8 @@ type Pound float64
 type Stone float64
 
 const (
-	KilogramToPound Kilogram = 0.4536
-	PoundToKilogram Pound    = 2.205
+	KilogramToPound Kilogram = 2.2046
+	PoundToKilogram Pound    = 0.4536
 )
 
 func (k Kilogram) String() string { return fmt.Sprintf("%g kg", k) }
@@ -43,7 +43,7 @@ func PToK(p Pound) Kilogram { return Kilogram(p * PoundToKilogram) }
 func PToO(p Pound) Ounce { return Ounce(p * 16) }
 
 // PToS converts a mass in Pounds to Stone
-func PToS(p Pound) Stone { return Stone(p * 14) }
+func PToS(p Pound) Stone { return Stone(p / 14) }
 
 // SToK converts a mass in Stone to Kilograms
 func SToK(s Stone) Kilogram { return Kilogram(PToK(SToP(s))) }
@@ -52,4 +52,4 @@ func SToK(s Stone) Kilogram { return Kilogram(PToK(SToP(s))) }
 func SToO(s Stone) Ounce { return Ounce(PToO(SToP(s))) }
 
 // SToP converts a mass in Stone to Pounds
-func SToP(s Stone) Pound { return Pound(s / 14) }
+func SToP(s Stone) Pound { return Pound(s * 14) }
