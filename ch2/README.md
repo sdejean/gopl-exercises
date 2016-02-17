@@ -2,18 +2,21 @@ Chapter 2 Examples and Exercises
 ================================
 
 ## Examples
+ftoc
 boiling
 cf
 echo4
 fib
-ftoc
-popcount
 tempconv
 tempconv0
+popcount
 
 ## Exercises
+## Exercise 2.1
 cfk
-exercise2.1
+### Exercise 2.2
 unitconv
 conv
-popcount-loop
+### Exercise 2.3 
+popcountLoop
+popcountTest
