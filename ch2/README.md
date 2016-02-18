@@ -32,3 +32,12 @@ Chapter 2 Examples and Exercises
   - Packages:
     - popcountLoop
     - popcountTest
+- Exercise 2.4
+  - Write a version of `PopCount` that counts bits by shifting its argument
+    through 64 bit postitions, testing the rightmost bit each time. Compare its
+    performance to the table-lookup version.
+  - Packages:
+    - popcountShift64
+    - popcountTest
+    - popcountInitTest: Just a pretty print version of popcount that gave me a
+      better understanding of the algorithm.
