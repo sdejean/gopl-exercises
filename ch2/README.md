@@ -41,3 +41,10 @@ Chapter 2 Examples and Exercises
     - popcountTest
     - popcountInitTest: Just a pretty print version of popcount that gave me a
       better understanding of the algorithm.
+- Exercise 2.5
+  - The expression `x&(x-1)` clears the rightmost non-zero bit of `x`. Write a
+    version of `PopCount` that counts bits by using this fact, and asses its
+    performance.
+  - Packages:
+    - popcountClearLsb
+    - popcountTest
