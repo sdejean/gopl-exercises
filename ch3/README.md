@@ -1,6 +1,7 @@
-Chapter 2 Examples and Exercises
+Chapter 3 Examples and Exercises
 ================================
 
 ## Examples
+- surface
 
 ## Exercises
