@@ -8,9 +8,9 @@ import "fmt"
 import "os"
 import "strconv"
 
-import "../unitconv/lengthconv"
-import "../unitconv/massconv"
-import "../unitconv/tempconv"
+import "github.com/sdejean/gopl-exercises/ch2/unitconv/lengthconv"
+import "github.com/sdejean/gopl-exercises/ch2/unitconv/massconv"
+import "github.com/sdejean/gopl-exercises/ch2/unitconv/tempconv"
 
 func main() {
 

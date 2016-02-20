@@ -4,10 +4,10 @@ package main
 import "fmt"
 import "testing"
 
-import "../popcount"
-import "../popcountLoop"
-import "../popcountClearLsb"
-import "../popcountShift64"
+import "github.com/sdejean/gopl-exercises/ch2/popcount"
+import "github.com/sdejean/gopl-exercises/ch2/popcountLoop"
+import "github.com/sdejean/gopl-exercises/ch2/popcountClearLsb"
+import "github.com/sdejean/gopl-exercises/ch2/popcountShift64"
 
 func main() {
 	fmt.Println(popcount.PopCount(4))
