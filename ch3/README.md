@@ -11,3 +11,8 @@ Chapter 3 Examples and Exercises
     this gracefully). Modify the program to skip invalid polygons.
   - Packages:
     - surface-mod
+- Exercise 3.2
+  - Experiment with visualizations of other funcions in the `math` package. Can
+    you produce an egg box, moguls, or a saddle?
+  - Packages:
+    - saddle
