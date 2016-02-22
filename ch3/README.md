@@ -3,6 +3,7 @@ Chapter 3 Examples and Exercises
 
 ## Examples
 - surface
+- mandelbrot
 
 ## Exercises
 - Exercise 3.1
