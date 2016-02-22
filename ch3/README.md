@@ -21,3 +21,9 @@ Chapter 3 Examples and Exercises
     (`#ff0000`) and the valleys blue (`#0000ff`).
   - Packages:
     - surface-mod
+- Exercise 3.4
+  - Following the approach of the Lissajous example in Section 1.7, construct a
+    web server that computes surfaces and writes SVG data to the client. The
+    server must set the `Content-Type` header to `image/svg+html`.
+  - Packages:
+    - server-surface
