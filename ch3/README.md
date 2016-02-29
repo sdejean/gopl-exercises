@@ -28,8 +28,12 @@ Chapter 3 Examples and Exercises
     server must set the `Content-Type` header to `image/svg+html`.
   - Packages:
     - server-surface
-- Exercise 3.5
+- Exercise 3.5 - TODO
   - Implement a full-color Mandelbrot set using the function `image.NewRGBA`
     and the `color.RGBA` or `color.YCbCr`.
   - Packages:
     - mandelbrot-color
+- Exercise 3.6 - TODO
+- Exercise 3.7 - TODO
+- Exercise 3.8 - TODO
+- Exercise 3.9 - TODO
